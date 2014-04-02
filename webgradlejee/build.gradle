@@ -3,14 +3,8 @@ apply plugin: 'groovy'
 apply plugin: 'war'
 apply plugin: 'maven'
 
-group = 'org.opendolphin.webgradlejee'
+group = 'org.svenehrke.webgradlejee'
 version = '1.0-SNAPSHOT'
-
-description = """"""
-
-sourceCompatibility = 1.5
-targetCompatibility = 1.5
-
 
 
 repositories {
@@ -18,6 +12,6 @@ repositories {
      maven { url "http://repo.maven.apache.org/maven2" }
 }
 dependencies {
-    compile group: 'org.open-dolphin', name: 'dolphin-server', version:'0.9'
+	compile 'org.codehaus.groovy:groovy-all:2.1.9'
     providedCompile group: 'javax', name: 'javaee-api', version:'7.0'
 }
