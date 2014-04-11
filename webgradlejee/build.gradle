@@ -8,8 +8,7 @@ version = '1.0-SNAPSHOT'
 
 
 repositories {
-        
-     maven { url "http://repo.maven.apache.org/maven2" }
+     mavenCentral()
 }
 dependencies {
 	compile 'org.codehaus.groovy:groovy-all:2.1.9'
