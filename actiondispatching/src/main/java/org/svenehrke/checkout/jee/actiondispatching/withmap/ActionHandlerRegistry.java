@@ -18,17 +18,30 @@ public class ActionHandlerRegistry {
 	@PostConstruct
 	void initialize() {
 		for (IActionHandler actionHandler : actionHandlers) {
-			String sn = actionHandler.getClass().getSimpleName();
-			String key = String.valueOf(sn.charAt(0)).toLowerCase();
-			key += sn.substring(1).replace("Handler", "");
-			System.out.println("key =  " + key);
-			handlerMap.put(key, actionHandler);
+			Class<? extends IActionHandler> clazz = actionHandler.getClass();
+			String name;
+			if (clazz.isAnnotationPresent(Action.class)) {
+				Action annotation = clazz.getAnnotation(Action.class);
+				name = annotation.value();
+			}
+			else {
+				String key = readKeyFromClass(clazz);
+				name = key;
+			}
+			handlerMap.put(name, actionHandler);
 		}
 	}
 
-
 	IActionHandler actionByKey(String key) {
 		return handlerMap.get(key);
+	}
+
+	private String readKeyFromClass(Class<? extends IActionHandler> clazz) {
+		String sn = clazz.getSimpleName();
+		String key = String.valueOf(sn.charAt(0)).toLowerCase();
+		key += sn.substring(1).replace("Handler", "");
+		System.out.println("key =  " + key);
+		return key;
 	}
 
 

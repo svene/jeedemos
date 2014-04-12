@@ -1,9 +1,5 @@
 package org.svenehrke.checkout.jee.actiondispatching.withmap;
 
-import org.svenehrke.checkout.jee.actiondispatching.withruntimequalifiers.infra.ActionEvent;
-
-import javax.enterprise.event.Event;
-import javax.enterprise.inject.Any;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
