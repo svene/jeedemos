@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'war'
+apply plugin: 'maven'
+
+group = 'org.svenehrke.TTT'
+version = '1.0-SNAPSHOT'
+
+
+repositories {
+     mavenCentral()
+}
+dependencies {
+	compile 'org.codehaus.groovy:groovy-all:2.1.9'
+	providedCompile 'javax:javaee-api:7.0'
+	testCompile 'junit:junit:4.11'
+}
+
+sourceCompatibility = 1.7
+//targetCompatibility = 1.7
+
