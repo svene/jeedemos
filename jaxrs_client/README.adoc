@@ -1,0 +1,2 @@
+see http://www.adam-bien.com/roller/abien/entry/jax_rs_2_0_client
+
