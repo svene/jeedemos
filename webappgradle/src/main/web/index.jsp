@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: sven
-  Date: 18.04.14
-  Time: 22:08
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
-
+	<h1>Just a JSP</h1>
+	<a href="/context/myservlet">MyServlet</a>
 </body>
 </html>
